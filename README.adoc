@@ -40,14 +40,35 @@ Function that call it called back with the parameters of (_error_, _result_).
 ----
 'use strict'
 
-const pandoc = require('gulp-pandoc-cli);
+const pandoc = require('gulp-pandoc-cli)
+	adoc2docbook = require('gulp-adoc2docbook');
 
 function convert(){
-	let args = '-f docbook --pdf-engine=xelatex'; 
-	return src(__adoc-input)
-		.pipe(adoc2xml()
-		.pipe(pandoc(args)
-		.pipe(desc(__pdf-output);
+	return clean('./output')
+		.pipe(src('input/*.adoc'))
+		.pipe(adoc2docbook()
+    .pipe(gxml({
+    			parseOpts: {
+    				trim: true,
+    				strict: false
+    			},
+    			buildOpts: {
+    				renderOpts: {
+    					pretty: false
+    				},
+    				allowSurrogateChars: true,
+    				cdata: true
+    			},
+    			callback: function (result) {
+    				return result.replace(/search/g, 'MySearch');
+    			}
+    		}))
+		.pipe(pandoc({
+			f: 'docbook',
+			args: ['--pdf-engine=xelatex']
+		})
+		.pipe(desc('output/pdf/');
+		
 }
 
 ----
