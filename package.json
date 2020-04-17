@@ -1,0 +1,20 @@
+{
+  "name": "gulp-pandoc",
+  "version": "1.0.0",
+  "description": "Gulp wrapper for node-gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "node",
+    "pandoc"
+  ],
+  "author": "butcherpete",
+  "license": "ISC",
+  "dependencies": {
+    "replace-ext": "^1.0.0",
+    "through2": "^3.0.1"
+  }
+}
