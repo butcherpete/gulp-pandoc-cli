@@ -1,7 +1,9 @@
 
 = gulp-pandoc-cli 
 
-Run pandoc within gulp-cli. All parameters specific as you would in the pandoc CLI. Pandoc installation is required.
+A gulp4 wrapper for https://www.npmjs.com/package/node-pandoc[node-pandoc] by Eric Shinn 
+
+Run pandoc within gulp. The input and output directories are define using gulp.src and gulp.desc. All other parameters are defined as string and passed in as you would in the pandoc CLI. Pandoc installation is required.
 
 == Install
 
@@ -34,6 +36,7 @@ Function that call it called back with the parameters of (_error_, _result_).
 
 === Examples 
 
+*/
 Converting a word.docx file to a markdown.md
 
 ----
@@ -162,8 +165,7 @@ callback = function (err, result) {
 pandoc(src, args, callback);
 ----
 
-![Wokavagor](https://i.ytimg.com/vi/aDROVYwZ7IU/maxresdefault.jpg)
-> # ...it can go sideways and slantways and longways and backways and squareways and frontways and any other ways that you can think of.
+
 
 == License
 
