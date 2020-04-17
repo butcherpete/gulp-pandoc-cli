@@ -26,8 +26,7 @@ Prior to using gulp-pandoc-cli, you must http://pandoc.org/installing.html) by [
 The same list of arguments that pandoc accepts on the command line. Arguments are accepted as either a full String or as an Array.
 
 ==== options
-The options parameter accepts and passes along a Node Child_Process.Spawn object and is completely optional. View [a _complete_ list of Pandoc options on the Pandoc website](http://pandoc.org/README.html#options) or pull it from the command-line by typing:  
-```$ pandoc -h```
+The options parameter accepts and passes along a Node Child_Process.Spawn object and is completely optional. View [a _complete_ list of Pandoc options on the Pandoc website](http://pandoc.org/README.html#options) or pull it from the command-line by typing:  `$ pandoc -h`
 
 ==== callback
 Function that call it called back with the parameters of (_error_, _result_).
@@ -37,7 +36,6 @@ Function that call it called back with the parameters of (_error_, _result_).
 
 Converting a word.docx file to a markdown.md
 
-[js]
 ----
 // In ES-6 (ES-2015)
 import nodePandoc from 'node-pandoc'
@@ -169,5 +167,5 @@ pandoc(src, args, callback);
 
 == License
 
-Copyright &copy; Eric Shinn  
+Copyright &copy; Todd Smith 
 Licensed under the MIT License
