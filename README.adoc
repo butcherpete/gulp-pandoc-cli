@@ -20,6 +20,7 @@ Prior to using gulp-pandoc-cli, you must http://pandoc.org/installing.html) by [
 
 == Usage
 
+////
 `pandoc ( _src_ _args_ [_options_] _callback_ )`
 
 === Parameters
@@ -32,11 +33,26 @@ The options parameter accepts and passes along a Node Child_Process.Spawn object
 
 ==== callback
 Function that call it called back with the parameters of (_error_, _result_).
-
+////
 
 === Examples 
 
-*/
+----
+'use strict'
+
+const pandoc = require('gulp-pandoc-cli);
+
+function convert(){
+	let args = '-f docbook --pdf-engine=xelatex'; 
+	return src(__adoc-input)
+		.pipe(adoc2xml()
+		.pipe(pandoc(args)
+		.pipe(desc(__pdf-output);
+}
+
+----
+
+
 Converting a word.docx file to a markdown.md
 
 ----
