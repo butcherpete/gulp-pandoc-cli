@@ -7,40 +7,33 @@ Run pandoc within gulp-cli. All parameters specific as you would in the pandoc C
 
 ----
 # If using as a dependancy in your module
-npm install node-pandoc --save
+npm install gulp-pandoc-cli --save
 
 # ...or for use in your project
-npm install node-pandoc --save-dev
+npm install gulp-pandoc-cli --save-dev
 ----
 
-Prior to using node-pandoc, you must http://pandoc.org/installing.html) by [John MacFarlane](http://johnmacfarlane.net/[install Pandoc].
+Prior to using gulp-pandoc-cli, you must http://pandoc.org/installing.html) by [John MacFarlane](http://johnmacfarlane.net/[install Pandoc].
 
 
 == Usage
 
-**pandoc ( _src_ _args_ [_options_] _callback_ )**
+`pandoc ( _src_ _args_ [_options_] _callback_ )`
 
-### Parameters
+=== Parameters
 
-////
-#### src
-> The _src_ can be either the location of a file (_./content/file.docx_) or a string of textual input ("_# Hello, Bananas_").
+==== args
+The same list of arguments that pandoc accepts on the command line. Arguments are accepted as either a full String or as an Array.
 
-////
-
-#### args
-> The same list of arguments that pandoc accepts on the command line. Arguments are accepted as either a full String or as an Array.
-
-#### options
-> The options parameter accepts and passes along a Node Child_Process.Spawn object and is completely optional. View [a _complete_ list of Pandoc options on the Pandoc website](http://pandoc.org/README.html#options) or pull it from the command-line by typing:  
+==== options
+The options parameter accepts and passes along a Node Child_Process.Spawn object and is completely optional. View [a _complete_ list of Pandoc options on the Pandoc website](http://pandoc.org/README.html#options) or pull it from the command-line by typing:  
 ```$ pandoc -h```
 
-#### callback
-> Function that call it called back with the parameters of (_error_, _result_).
+==== callback
+Function that call it called back with the parameters of (_error_, _result_).
 
 
-
-### Examples of Using Node-Pandoc
+=== Examples 
 
 Converting a word.docx file to a markdown.md
 
@@ -107,7 +100,7 @@ pandoc(src, args, callback);
 
 Or give-a-string/get-a-string: Markdown -> HTML
 
-```js
+----
 var pandoc = require('node-pandoc'),
     src = '# Hello \n\nIt\'s bananas',
     // Arguments in either a single String or as an Array:
@@ -122,11 +115,11 @@ callback = function (err, result) {
 
 // Call pandoc
 pandoc(src, args, callback);
-```
+----
 
 ...and in reverse: HTML -> Markdown
 
-```js
+----
 var pandoc = require('node-pandoc'),
     src = '<h1>Hello</h1><p>It&rsquo;s bananas</p>',
     // Arguments in either a single String or as an Array:
@@ -148,13 +141,13 @@ callback = function (err, result) {
 
 // Call pandoc
 pandoc(src, args, callback);
-```
+----
 
-## One more thing...
+== One more thing...
 
 It does URLs too.
 
-```js
+----
 var pandoc = require('node-pandoc'),
     src = 'https://www.npmjs.com/package/node-pandoc',
     // Arguments in either a single String or as an Array:
@@ -169,12 +162,12 @@ callback = function (err, result) {
 
 // Call pandoc
 pandoc(src, args, callback);
-```
+----
 
 ![Wokavagor](https://i.ytimg.com/vi/aDROVYwZ7IU/maxresdefault.jpg)
 > # ...it can go sideways and slantways and longways and backways and squareways and frontways and any other ways that you can think of.
 
-## License
+== License
 
 Copyright &copy; Eric Shinn  
 Licensed under the MIT License
