@@ -1,7 +1,7 @@
 
-= gulp-node-pandoc [![npm version](https://badge.fury.io/js/node-pandoc.svg)](https://badge.fury.io/js/node-pandoc) [![SugarHai](https://img.shields.io/badge/farts-sprinkles-E482B5.svg)](http://www.sugarhai.com/images/sprinklepoo-gif.gif)
+= gulp-pandoc-cli 
 
-Run pandoc in gulp. Pandoc installation is required.
+Run pandoc within gulp-cli. All parameters specific as you would in the pandoc CLI. Pandoc installation is required.
 
 == Install
 

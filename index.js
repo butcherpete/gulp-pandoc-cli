@@ -14,7 +14,7 @@ const nodepandoc = require('node-pandoc'),
 	Transforms = require('stream'.Transform, 
 	replaceExt = require('replace-ext');
 
-const PluginName  = 'gulp-pandoc';
+const PluginName  = 'gulp-pandoc-cli';
 
 /* Exports */
 
